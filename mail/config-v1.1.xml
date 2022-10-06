@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<clientConfig version="1.1">
+    <emailProvider id="ikv.tw">
+        <domain>ikv.tw</domain>
+        <domain>ikv-tech.com</domain>
+        <domain>email.ikv-tech.com</domain>
+
+        <displayName>IKV Mail</displayName>
+        <displayShortName>IKV</displayShortName>
+
+        <incomingServer type="imap">
+            <hostname>imap.ikv.tw</hostname>
+            <port>143</port>
+            <socketType>STARTTLS</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </incomingServer>
+        <incomingServer type="imap">
+            <hostname>imap.ikv.tw</hostname>
+            <port>993</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </incomingServer>
+
+        <incomingServer type="pop3">
+            <hostname>pop3.ikv.tw</hostname>
+            <port>110</port>
+            <socketType>STARTTLS</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+            <pop3>
+                <leaveMessagesOnServer>true</leaveMessagesOnServer>
+                <downloadOnBiff>true</downloadOnBiff>
+                <daysToLeaveMessagesOnServer>14</daysToLeaveMessagesOnServer>
+            </pop3>
+        </incomingServer>
+        <incomingServer type="pop3">
+            <hostname>pop3.ikv.tw</hostname>
+            <port>995</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+            <pop3>
+                <leaveMessagesOnServer>true</leaveMessagesOnServer>
+                <downloadOnBiff>true</downloadOnBiff>
+                <daysToLeaveMessagesOnServer>14</daysToLeaveMessagesOnServer>
+            </pop3>
+        </incomingServer>
+
+        <outgoingServer type="smtp">
+            <hostname>smtp.ikv.tw</hostname>
+            <port>587</port>
+            <socketType>STARTTLS</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </outgoingServer>
+        <outgoingServer type="smtp">
+            <hostname>smtp.ikv.tw</hostname>
+            <port>465</port>
+            <socketType>STARTTLS</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </outgoingServer>
+    </emailProvider>
+    <clientConfigUpdate url="https://autoconfig.ikv.tw/mail/config-v1.1.xml" />
+</clientConfig>
