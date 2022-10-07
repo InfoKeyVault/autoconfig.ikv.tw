@@ -11,35 +11,33 @@
                 <Type>IMAP</Type>
                 <TTL>1</TTL>
                 <Server>imap.ikv.tw</Server>
-                <Port>993</Port>
+                <Port>143</Port>
                 <DomainRequired>on</DomainRequired>
                 <DomainName>ikv.tw</DomainName>
                 <SPA>off</SPA>
-                <SSL>on</SSL>
-                <Encryption>SSL</Encryption>
+                <Encryption>TLS</Encryption>
                 <AuthRequired>on</AuthRequired>
             </Protocol>
             <Protocol>
                 <Type>POP3</Type>
                 <TTL>1</TTL>
                 <Server>pop3.ikv.tw</Server>
-                <Port>995</Port>
+                <Port>110</Port>
                 <DomainRequired>on</DomainRequired>
                 <DomainName>ikv.tw</DomainName>
                 <SPA>off</SPA>
-                <SSL>on</SSL>
-                <Encryption>SSL</Encryption>
+                <Encryption>TLS</Encryption>
                 <AuthRequired>on</AuthRequired>
             </Protocol>
             <Protocol>
                 <Type>SMTP</Type>
                 <TTL>1</TTL>
                 <Server>smtp.ikv.tw</Server>
-                <Port>465</Port>
+                <Port>587</Port>
                 <DomainRequired>on</DomainRequired>
                 <DomainName>ikv.tw</DomainName>
                 <SPA>off</SPA>
-                <SSL>on</SSL>
+                <Encryption>TLS</Encryption>
                 <AuthRequired>on</AuthRequired>
                 <UsePOPAuth>on</UsePOPAuth>
             </Protocol>
